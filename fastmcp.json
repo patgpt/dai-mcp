@@ -1,0 +1,9 @@
+{
+    "entrypoint": "src/dai_mcp/server.py",
+    "environment": {
+        "dependencies": [
+            "neo4j",
+            "pydantic"
+        ]
+    }
+}

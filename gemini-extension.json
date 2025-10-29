@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "skynet": {
+      "args": [
+        "dai-mcp"
+      ],
+      "command": "uvx"
+    }
+  },
+  "name": "dai-mcp",
+  "version": "1.0.0"
+}

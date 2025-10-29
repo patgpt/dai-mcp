@@ -1,0 +1,33 @@
+[project]
+name = "dai-mcp"
+version = "0.4.1"
+description = "Skynet Neural Network Memory Core - DAI MCP Server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.0.0",
+    "neo4j>=5.26.0",
+    "pydantic>=2.10.1",
+    "starlette>=0.28.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.389",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.25.3",
+    "testcontainers[neo4j]>=4.10.0",
+    "aiohttp>=3.8.0"
+]
+
+[project.scripts]
+dai-mcp = "dai_mcp:main"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
