@@ -1,5 +1,21 @@
 FROM python:3.11-slim
 
+# OCI Labels for Docker MCP Toolkit Discovery
+LABEL org.opencontainers.image.title="Skynet Neural Network DAI MCP Server"
+LABEL org.opencontainers.image.description="Persistent memory and knowledge graph for LLMs via Model Context Protocol"
+LABEL org.opencontainers.image.version="0.4.1"
+LABEL org.opencontainers.image.authors="Patrick Kelly"
+LABEL org.opencontainers.image.url="https://github.com/patgpt/dai-mcp"
+LABEL org.opencontainers.image.documentation="https://github.com/patgpt/dai-mcp#readme"
+LABEL org.opencontainers.image.source="https://github.com/patgpt/dai-mcp"
+LABEL org.opencontainers.image.licenses="MIT"
+
+# MCP Server Metadata
+LABEL mcp.server.name="skynet-neural-core"
+LABEL mcp.server.type="knowledge-graph"
+LABEL mcp.server.transport="http"
+LABEL mcp.server.port="8000"
+
 # Set working directory
 WORKDIR /app
 
